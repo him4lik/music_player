@@ -70,9 +70,9 @@ WSGI_APPLICATION = 'music_player.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'music_player',
-        'USER': 'root',
-        'PASSWORD': 'google123',
+        'NAME': 'database_name',
+        'USER': 'database_user',
+        'PASSWORD': 'your_database_password',
     }
 }
 
