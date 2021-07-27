@@ -1,0 +1,52 @@
+
+{%extends 'main_site/base.html'%}
+{%block title%}
+Register
+{%endblock title%}
+{%block body_class%}
+<body class="login-page sidebar-collapse">
+   {%endblock body_class%}
+   {%block register%}
+   <div class="page-header">
+      <div class="content">
+         <div class="container">
+            <div class="col-md-4 ml-auto mr-auto">
+               <div class="card card-login card-plain">
+                  <form class="form" method='POST' action=''>
+                     {% csrf_token%}
+                     {{form.non_field_errors}}
+                     {% for radio in form.is_buyer%}
+                     {{radio}}
+                     {%endfor%}
+                     <div class="card-body">
+                        <div class="input-group no-border input-lg">
+                           {{form.first_name}}
+                        </div>
+                        <div class="input-group no-border input-lg">
+                           {{form.last_name}}
+                        </div>
+                        <div class="input-group no-border input-lg">
+                           {{form.email_or_phone}}
+                        </div>
+                        <div class="input-group no-border input-lg">
+                           {{form.password}}
+                        </div>
+                        <div class="input-group no-border input-lg">
+                           {{form.contact_email}}
+                        </div>
+                     </div>
+                     <div class="card-footer text-center">
+                        <input type='Submit' value='Register' class="btn btn-primary btn-round btn-lg btn-block">
+                  </form>
+                  <div class="pull-left">
+                  <h6>
+                  <a href="{% url 'login_user' %}" class="link">Already a user?Login</a>
+                  </h6>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   {%endblock register%}

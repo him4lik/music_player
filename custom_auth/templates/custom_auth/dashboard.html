@@ -1,0 +1,104 @@
+
+
+{%extends 'main_site/base.html'%}
+{%block title%}
+Dashboard
+{%endblock title%}
+{%block dashboard%}
+<div class="col-md-10 ml-auto col-xl-10 mr-auto">
+   <p class="category">DASHBOARD</p>
+   <div class="card">
+      <div class="card-header">
+         <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="black">
+            <li class="nav-item">
+               <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">Profile</a>
+            </li>
+         </ul>
+      </div>
+      <div class="card-body" data-background-color="black">
+         <div class="tab-content ">
+            <div class="tab-pane active" id="profile" role="tabpanel">
+               <div class="container">
+                  {{form1.non_field_errors}}
+                  <form action='' method='POST'>
+                     {%csrf_token%}
+                     <div id="inputs">
+                        <div class="row">
+                           <div class="col-sm-6 col-lg-3">
+                              <div class="form-group">
+                                 {{form1.first_name.label_tag}}
+                                 {{form1.first_name}}
+                              </div>
+                           </div>
+                           <div class="col-sm-6 col-lg-3">
+                              <div class="form-group ">
+                                 {{form1.last_name.label_tag}}
+                                 {{form1.last_name}}
+                              </div>
+                           </div>
+                           <div class="col-sm-6 col-lg-3">
+                              <div class="form-group ">
+                                 {{form1.email_or_phone.label_tag}}
+                                 {{form1.email_or_phone}}                
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                           <input type="Submit" value='Save' class='btn'>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <br/><br/><br/>
+               <div class="container">
+                  <p class="category">Change Password</p>
+                  {{form2.non_field_errors}}
+                  <form action='' method='POST'>
+                     {%csrf_token%}
+                     <div id="inputs">
+                        <div class="row">
+                           <div class="col-sm-6 col-lg-3">
+                              <div class="form-group">
+                                 {{form2.current_password.label_tag}}
+                                 {{form2.current_password}}
+                              </div>
+                           </div>
+                           <div class="col-sm-6 col-lg-3">
+                              <div class="form-group ">
+                                 {{form2.new_password.label_tag}}
+                                 {{form2.new_password}}
+                              </div>
+                           </div>
+                           <div class="col-sm-6 col-lg-3">
+                              <div class="form-group ">
+                                 {{form2.retype_password.label_tag}}
+                                 {{form2.retype_password}}                
+                              </div>
+                           </div>
+                           <div class="col-sm-6 col-lg-3">
+                              <div class="form-group ">
+                                 {{form2.email_or_phone}}                
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                           <input type="Submit" value='Save' class='btn'>
+                        </div>
+                     </div>
+                  </form>
+                  <br/>
+                  <div id="inputs">
+                     <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                           <a  class="btn btn-danger" href="{%url 'delete_account'%}">Delete Account</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{%endblock dashboard%}
+

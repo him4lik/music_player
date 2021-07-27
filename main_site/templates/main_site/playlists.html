@@ -1,0 +1,32 @@
+
+
+{%extends 'main_site/base.html'%}
+{%block title%}
+Playlists
+{%endblock title%}
+{%block playlists%}
+<h2>Playlists</h2>
+{%for playlist in playlists%}
+<div id="images">
+   <div class="row">
+      <div class="col-sm-6">
+         <a href="{%url 'single_playlist' playlist.id%}" class="btn btn-primary">
+         {{playlist.name}}
+         </a>
+      </div>
+      <div class="col-sm-6">
+         <a href="{%url 'remove_playlist' playlist.id%}" class="btn btn-warning" >
+         Delete
+         </a>
+      </div>
+   </div>
+</div>
+{%endfor%}
+<br/><br/><br/>
+<form action="{%url 'create_playlist'%}" method='POST'>
+   {%csrf_token%}
+   <input type='text' name='new_playlist' >
+   <input type='submit' value='create'>
+</form>
+{%endblock playlists%}
+

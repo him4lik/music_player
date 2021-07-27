@@ -1,0 +1,23 @@
+
+
+{%extends 'main_site/base.html'%}
+{%block title%}
+Search
+{%endblock title%}
+{%block search%}
+<form action='' method='POST'>
+   {%csrf_token%}
+   {{form}}
+   <input type='submit' value='search song'>
+</form>
+{%if songs_list%}
+{%for song in songs_list%}
+<div >
+   <a href="{%url 'play_song' song.id%}" class="btn btn-primary">
+   {{song.name}}
+   </a>
+</div>
+{%endfor%}
+{%endif%}
+{%endblock search%}
+

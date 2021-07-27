@@ -1,0 +1,42 @@
+
+
+{%extends 'main_site/base.html'%}
+{%block title%}
+Login
+{%endblock title%}
+{%block body_class%}
+<body class="login-page sidebar-collapse">
+   {%endblock body_class%}
+   {%block login_page%}
+   <div class="page-header">
+      <div class="content">
+         <div class="container">
+            <div class="col-md-4 ml-auto mr-auto">
+               <div class="card card-login card-plain">
+                  <br/><br/><br/>
+                  <form class="form" method='POST' action=''>
+                     {% csrf_token%}
+                     <div class="card-body">
+                        {{form.non_field_errors}}
+                        {%for field in form%}
+                        <div class="input-group no-border input-lg">
+                           {{field}}
+                        </div>
+                        {%endfor%}
+                     </div>
+                     <div class="card-footer text-center">
+                        <input type='Submit' value='Login' class="btn btn-primary btn-round btn-lg btn-block">
+                        <div class="pull-left">
+                           <h6>
+                              <a href="{% url 'register' %}" class="link">Create Account</a>
+                           </h6>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   {%endblock login_page%}
+

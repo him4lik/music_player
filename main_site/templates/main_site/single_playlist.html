@@ -1,0 +1,34 @@
+
+
+{%extends 'main_site/base.html'%}
+{%block title%}
+Playlist Songs
+{%endblock title%}
+{%block single_playlist%}
+{%if songs|length is 0%}
+<div id="images">
+   <div class="row">
+      <div class="col-sm-6">
+         <h5>NO SONGS YET</h5>
+      </div>
+   </div>
+</div>
+{%endif%}
+{%for song in songs%}
+<div id="images">
+   <div class="row">
+      <div class="col-sm-6">
+         <a href="{%url 'play_playlist' idd song.id %}" class="btn btn-primary">
+         {{song.name}}
+         </a>
+      </div>
+      <div class="col-sm-6">
+         <a href="{% url 'remove_from_playlist' idd song.id%}?path={{request.path}}" class="btn btn-warning">
+         Remove
+         </a>
+      </div>
+   </div>
+</div>
+{%endfor%}
+{%endblock single_playlist%}
+

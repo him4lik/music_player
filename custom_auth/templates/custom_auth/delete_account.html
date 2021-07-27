@@ -1,0 +1,30 @@
+
+
+{%extends 'main_site/base.html'%}
+{%block title%}
+Delete Account
+{%endblock title%}
+{%block delete_account%}
+<div class="container">
+   <h4>Confirm Delete</h4>
+   {{form.non_field_errors}}
+   <form action='' method='POST'>
+      {%csrf_token%}
+      <div id="inputs">
+         <div class="row">
+            <div class="col-sm-6 col-lg-3">
+               <div class="form-group">
+                  {{form.password.label_tag}}
+                  {{form.password}}
+                  {{form.email_or_phone}}
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+               <input type="Submit" value='Delete' class='btn'>
+            </div>
+         </div>
+      </div>
+   </form>
+</div>
+{%endblock delete_account%}
+
