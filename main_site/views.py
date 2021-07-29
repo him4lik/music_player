@@ -163,7 +163,7 @@ def create_playlist(request):
 		playlist.objects.create(name=value, user=request.user)
 		try:
 			request.POST['path']
-			return redirect(request.POST['path'])
+			return redirect(request.POST['path']+'?redir='+request.POST['redir']+'&get_value='+request.POST['get_value'])
 		except:
 			return redirect('playlists')
 
