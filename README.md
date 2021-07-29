@@ -24,6 +24,12 @@ DATABASES = {
     }
 }
 ```
+After this makemigrations and migrate them
+```javascript
+python manage.py makemigrations
+python manage.py migrate
+```
+
 #### Initial Database Setup
 Create User with email 'anoymous@anonymous.com'
 ![Screenshot from 2021-07-29 14-04-32](https://user-images.githubusercontent.com/75934883/127460157-4a8a6647-1fad-4916-88de-f9f691a56611.png)
