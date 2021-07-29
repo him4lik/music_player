@@ -12,7 +12,7 @@ Register
          <div class="container">
             <div class="col-md-4 ml-auto mr-auto">
                <div class="card card-login card-plain">
-                  <form class="form" method='POST' action="{%url 'login_user'%}">
+                  <form class="form" method='POST' action=''>
                      {% csrf_token%}
                      {{form.non_field_errors}}
                      {% for radio in form.is_buyer%}
