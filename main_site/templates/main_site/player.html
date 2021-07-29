@@ -32,7 +32,7 @@ Player
          {%if not request.GET.page%}
          <a href="{%url 'show_playlists' i.id %}?redir={{request.path}}&get_value={{page_number}}" class="btn btn-primary">Add to playlist</a>
          {%else%}
-         <a href="{%url 'show_playlists' i.id %}?redir={{request.path}}&get_value={{request.GET.page}}">Add to playlist</a>
+         <a href="{%url 'show_playlists' i.id %}?redir={{request.path}}&get_value={{request.GET.page}}" class='btn btn-primary'>Add to playlist</a>
          {%endif%}
       </div>
       {%endfor%}
