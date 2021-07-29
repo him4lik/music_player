@@ -40,9 +40,16 @@ Create a playlist named 'Top 5' and add songs to it for anonymous user created e
 
 ## In Action
 #### User Authentication
+![auth (online-video-cutter com)](https://user-images.githubusercontent.com/75934883/127489631-22a6a0b3-e80e-4c9c-b86d-3301a1cc7905.gif)
 #### Play songs
+![playsong (online-video-cutter com)](https://user-images.githubusercontent.com/75934883/127489578-13feb445-0aa0-4221-802d-ba0204859511.gif)
 #### Create/Delete Playlists
+![createp (online-video-cutter com)](https://user-images.githubusercontent.com/75934883/127489609-59926c75-f6cd-41fe-a086-3dc2215dda3c.gif)
 #### Add to Playlist
+![addtop (online-video-cutter com)(1)](https://user-images.githubusercontent.com/75934883/127489654-a34b133e-a7a1-4220-89ed-d0b4aac09e41.gif)
 #### Like Songs
+![like (online-video-cutter com)](https://user-images.githubusercontent.com/75934883/127488786-ea75933c-b398-45f5-a24f-eaceddaf452d.gif)
 #### Search Songs
+![search (online-video-cutter com)](https://user-images.githubusercontent.com/75934883/127489592-19626b54-55a3-4285-b0f7-b459d3735ef3.gif)
 #### Dashboard
+![dash (online-video-cutter com)](https://user-images.githubusercontent.com/75934883/127489219-50664c66-26f7-4416-9b9e-c51b4e061329.gif)
