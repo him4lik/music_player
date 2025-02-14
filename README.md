@@ -18,7 +18,7 @@ Replace values of DB_NAME, DB_USER, DB_PASSWORD, DB_HOST according to your datab
 DB_NAME = 'music_player'
 DB_USER = 'ubuntu'
 DB_PASSWORD = 'forgot@123'
-DB_HOST = 'postgres'
+DB_HOST = 'localhost'
 ```
 After this makemigrations and migrate them
 ```javascript
