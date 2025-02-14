@@ -3,31 +3,28 @@ Django based music player using database as source of songs
 ## Features
 This project has functionality of Playing/Searching Songs, Playing/Creating/Deleting Playlists, Adding Songs to Playlists and Liking Songs
 ## Requirements
-Django==3.2<br/>
-Mysql==8.0.25 (or any other relational database of your choice)<br/>
-mysqlclient==2.0.3 (python database connector of your respective relational database)
+Postgres or any other database running, be it locally or on cloud.
 
 ## Installation
 ```javascript
 git clone https://github.com/him4lik/Music_Player.git
+cd music_player
+pip install -r requirements.txt
 ```
 ### Make following changes after cloning
 #### Database settings(music_player/settings.py)
 Replace values of ENGINE, NAME, USER, PASSWORD according to your database
 ```javascript
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'database_name',
-        'USER': 'database_user',
-        'PASSWORD': 'database_user_password',
-    }
-}
+DB_NAME = 'music_player'
+DB_USER = 'ubuntu'
+DB_PASSWORD = 'forgot@123'
+DB_HOST = 'postgres'
 ```
 After this makemigrations and migrate them
 ```javascript
 python manage.py makemigrations
 python manage.py migrate
+python manage.py runserver
 ```
 
 #### Initial Database Setup
