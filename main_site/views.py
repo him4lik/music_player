@@ -7,9 +7,12 @@ from .forms import search_form
 
 #Home-Page
 def home(request):
-	play_list=playlist.objects.get(name='Top 5')
-	songs=play_list.songs.all()
-	paginator= Paginator(songs,1)
+	try:
+		play_list = playlist.objects.get(name='Top 5')
+	except playlist.DoesNotExist:
+		return render(request, "main_site/home.html", {})
+	songs = play_list.songs.all()
+	paginator = Paginator(songs,1)
 	page_number = request.GET.get('page')
 	page_obj = paginator.get_page(page_number)
 	context={"page_obj":page_obj}
