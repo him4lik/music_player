@@ -13,7 +13,7 @@ pip install -r requirements.txt
 ```
 ### Make following changes after cloning
 #### Database settings(music_player/settings.py)
-Replace values of ENGINE, NAME, USER, PASSWORD according to your database
+Replace values of DB_NAME, DB_USER, DB_PASSWORD, DB_HOST according to your database
 ```javascript
 DB_NAME = 'music_player'
 DB_USER = 'ubuntu'
