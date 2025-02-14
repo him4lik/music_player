@@ -24,13 +24,14 @@ After this makemigrations and migrate them
 ```javascript
 python manage.py makemigrations
 python manage.py migrate
-python manage.py runserver
+python manage.py createsuperuser --email_or_phone <email_or_phone> # after this prompt will ask you to set password for superuser
+python manage.py runserver # runs the server locally
 ```
 
 #### Initial Database Setup
-Create User with email 'anoymous@anonymous.com'
+Create User with email
 ![Screenshot from 2021-07-29 14-04-32](https://user-images.githubusercontent.com/75934883/127460157-4a8a6647-1fad-4916-88de-f9f691a56611.png)
-Start server, Go to '/admin/', and add songs to 'songs' model for anonymous user created earlier<br/>
+Start server, Go to [localhost:8000/admin/](localhost:8000/admin/), and add songs to 'songs' model for anonymous user created earlier<br/>
 ![Screenshot from 2021-07-29 13-57-20](https://user-images.githubusercontent.com/75934883/127459352-b9bf349b-9e6f-43de-8f78-1f5f3de6b6be.png)
 Create a playlist named 'Top 5' and add songs to it for anonymous user created earlier
 ![Screenshot from 2021-07-29 13-57-55](https://user-images.githubusercontent.com/75934883/127459178-91f029f3-601d-4970-a3e0-164ed70ead2d.png)
